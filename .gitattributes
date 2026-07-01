@@ -1,2 +1,49 @@
-# Auto detect text files and perform LF normalization
+# Auto-detect text files and normalize line endings to LF
 * text=auto
+
+# WebAssembly binary files - treat as binary (no line-ending conversion)
+*.wasm binary
+
+# Archive files - treat as binary
+*.arcd binary
+*.arci binary
+
+# Defold-specific binary/metadata files
+*.projectc binary
+*.dmanifest binary
+*.public.der binary
+
+# Images - treat as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.svg text
+
+# Audio - treat as binary
+*.wav binary
+*.ogg binary
+*.mp3 binary
+
+# Fonts - treat as binary
+*.ttf binary
+*.woff binary
+*.woff2 binary
+
+# Ensure LF line endings for web-facing text files
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.sh text eol=lf
+
+# IndexNow key file — must be served as plain text
+*.txt text eol=lf
+
+# GitHub Pages specific: keep CRLF out of deployed files
+.gitattributes text eol=lf
+.gitignore text eol=lf
